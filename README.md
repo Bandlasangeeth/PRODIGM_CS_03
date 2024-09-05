@@ -1,4 +1,4 @@
-Password Complexity Checker
+**Password Complexity Checker**
 
 A simple Python script that checks the complexity of a user-provided password.
 

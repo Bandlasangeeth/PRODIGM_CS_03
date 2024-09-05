@@ -4,11 +4,18 @@ A simple Python script that checks the complexity of a user-provided password.
 
 **Features**
 Validates password complexity based on the following criteria:
+
+
 Minimum length of 8 characters
+
 At least one uppercase letter
+
 At least one lowercase letter
+
 At least one numeric digit
+
 At least one special character (e.g., !, @, #, $, %, etc.)
+
 Provides a score based on the complexity rules met.
 
 **Example**

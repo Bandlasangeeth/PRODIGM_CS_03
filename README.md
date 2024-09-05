@@ -1,9 +1,9 @@
-****Password Complexity Checker********
+Password Complexity Checker
 
 A simple Python script that checks the complexity of a user-provided password.
 
-******Features********
-**
+******Features*****
+
 Validates password complexity based on the following criteria:
 
 
@@ -27,6 +27,7 @@ $ python password_checker.py
 ----------------Password Complexity Checker--------------------
 
 -----------------------------NOTICE----------------------------
+
 The Length of the Password must be at least 8 Characters
 
 

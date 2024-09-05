@@ -1,39 +1,44 @@
-Password Complexity Checker
-A simple Python script that checks the complexity of a user-provided password.
 
-Features
-Validates password complexity based on the following criteria:
-Minimum length of 8 characters
-At least one uppercase letter
-At least one lowercase letter
-At least one numeric digit
-At least one special character (e.g., !, @, #, $, %, etc.)
-Provides a score based on the complexity rules met.
-Usage
-Clone the repository:
-git clone https://github.com/your-username/password-complexity-checker.git
+print("----------------Password Complexity Checker--------------------")
+print("\n")
+print("-----------------------------NOTICE----------------------------")
+print("The Length of the Password must be at least * Characters")
+print("Password must be include alteast one Uppercase letter")
+print("Password must include at least one numeric numeric number .")
+print("Password must include at least one special character (eg.!,@,#,$,%..etc).")
+print("Password should not include easily guessable personal information")
 
-Navigate to the project directory:
-cd password-complexity-checker
+password=input("Enter the Password :")
+score=0
+has_lower=any(c.islower() for c in password)
+has_upper=any(c.isupper() for c in password)
+has_digit = any(c.isdigit() for c in password)
+has_special = any(not c.isalnum() for c in password)
 
-Run the script:
-python password_checker.py
+if(len(password)>=8):
+    score=score+20
+else:
+    print("Password length must be greater than 8 characters")
 
-Enter a password when prompted. The script will evaluate its complexity and display the score.
-Example
-$ python password_checker.py
-----------------Password Complexity Checker--------------------
+if has_upper :
+    score=score+20
+else:
+    print("password must be have Uppercase characters(eg.ABC..)")
 
------------------------------NOTICE----------------------------
-The Length of the Password must be at least 8 Characters
-Password must include at least one Uppercase letter
-Password must include at least one lowercase letter
-Password must include at least one numeric number
-Password must include at least one special character (e.g., !, @, #, $, %, etc.)
-Password should not include easily guessable personal information
+if(has_lower):
+    score=score+20
+else:
+    print("password must be have lowercase characters(eg.abc..)")
 
-Enter the Password: MySecureP@ssw0rd
-Your password score: 100
+if(has_digit):
+    score=score+20
+else:
+    print("password must be have numbers (eg.123..)")
 
-Contributing
-Contributions are welcome! If you’d like to improve this script or add new features, feel free to create a pull request.
+if(has_special):
+    score=score+20
+else:
+    print("password must be have special characters(eg.@#&..)")
+print("Your passoword score :",score)
+
+    
